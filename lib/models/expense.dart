@@ -15,5 +15,5 @@ class Expense {
   final String title;
   final double amount;
   final DateTime date;
-  final Category category; // 'leisure' lisure
+  final Category category; // 'leisure'
 }
