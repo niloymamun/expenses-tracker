@@ -31,6 +31,15 @@ class _ExpensesState extends State<Expenses> {
       category: Category.travel,
     ),
   ];
+  void _openAddExpenseOverlay() {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) {
+        return Text('Model bottom Sheet');
+      },
+    );
+  }
+
   @override
   Widget build(Object context) {
     return Scaffold(
@@ -39,7 +48,9 @@ class _ExpensesState extends State<Expenses> {
           'Flutter Expense Track',
           style: TextStyle(color: Colors.black),
         ),
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
+        actions: [
+          IconButton(onPressed: _openAddExpenseOverlay, icon: Icon(Icons.add)),
+        ],
       ),
       body: Column(
         children: [
